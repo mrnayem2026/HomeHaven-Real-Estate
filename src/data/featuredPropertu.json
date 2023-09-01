@@ -1,0 +1,212 @@
+[
+    {
+        "id": 1,
+        "title": "Beautiful Family Home",
+        "image": "https://images.pexels.com/photos/3995921/pexels-photo-3995921.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "description": "Spacious and modern family home with stunning views.",
+        "rooms": 4,
+        "bathrooms": 3,
+        "garageCapacity": 2,
+        "squareFeet": 2500,
+        "builtYear": 2010,
+        "propertyType": "House",
+        "propertyStatus": "For Sale",
+        "featuredStatus": "true",
+        "address": {
+            "country": "Australia",
+            "zipCode": "2000",
+            "city": "Sydney",
+            "area": "CBD",
+            "state": "New South Wales"
+        }
+    },
+    {
+        "id": 2,
+        "title": "Luxury Apartment",
+        "image": "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "description": "Elegant apartment with top-notch amenities.",
+        "rooms": 2,
+        "bathrooms": 2,
+        "garageCapacity": 1,
+        "squareFeet": 1500,
+        "builtYear": 2018,
+        "propertyType": "Apartment",
+        "propertyStatus": "For Rent",
+        "featuredStatus": "true",
+        "address": {
+            "country": "Canada",
+            "zipCode": "V8X 3X4",
+            "city": "Vancouver",
+            "area": "Downtown",
+            "state": "British Columbia"
+        }
+    },
+    {
+        "id": 3,
+        "title": "Lakeside Villa",
+        "image": "https://images.pexels.com/photos/12777619/pexels-photo-12777619.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "description": "Elegant villa with stunning lakeside views.",
+        "rooms": 5,
+        "bathrooms": 4,
+        "garageCapacity": 3,
+        "squareFeet": 3500,
+        "builtYear": 2015,
+        "propertyType": "Villa",
+        "propertyStatus": "For Sale",
+        "featuredStatus": "true",
+        "address": {
+            "country": "United Kingdom",
+            "zipCode": "SW1A 1AA",
+            "city": "London",
+            "area": "Westminster",
+            "state": "England"
+        }
+    },
+    {
+        "id": 4,
+        "title": "Urban Loft",
+        "image": "https://images.pexels.com/photos/4751419/pexels-photo-4751419.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "description": "Modern loft with an urban feel in the heart of the city.",
+        "rooms": 1,
+        "bathrooms": 1,
+        "garageCapacity": 0,
+        "squareFeet": 1000,
+        "builtYear": 2020,
+        "propertyType": "Loft",
+        "propertyStatus": "For Rent",
+        "featuredStatus": "true",
+        "address": {
+            "country": "Germany",
+            "zipCode": "10115",
+            "city": "Berlin",
+            "area": "Mitte",
+            "state": "Berlin"
+        }
+    },
+    {
+        "id": 5,
+        "title": "Coastal Retreat",
+        "image": "https://images.pexels.com/photos/12715501/pexels-photo-12715501.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "description": "Relaxing beachfront property with stunning ocean views.",
+        "rooms": 3,
+        "bathrooms": 2,
+        "garageCapacity": 2,
+        "squareFeet": 2000,
+        "builtYear": 2008,
+        "propertyType": "House",
+        "propertyStatus": "For Sale",
+        "featuredStatus": "true",
+        "address": {
+            "country": "Japan",
+            "zipCode": "100-0005",
+            "city": "Tokyo",
+            "area": "Chiyoda",
+            "state": "Tokyo"
+        }
+    },
+    {
+        "id": 6,
+        "title": "Modern Condo",
+        "image": "https://images.pexels.com/photos/312997/pexels-photo-312997.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "description": "Sleek and modern condo with city skyline views.",
+        "rooms": 2,
+        "bathrooms": 2,
+        "garageCapacity": 1,
+        "squareFeet": 1200,
+        "builtYear": 2019,
+        "propertyType": "Condo",
+        "propertyStatus": "For Rent",
+        "featuredStatus": "true",
+        "address": {
+            "country": "France",
+            "zipCode": "75001",
+            "city": "Paris",
+            "area": "1st Arrondissement",
+            "state": "Île-de-France"
+        }
+    },
+    {
+        "id": 7,
+        "title": "Tranquil Farmhouse",
+        "image": "https://images.pexels.com/photos/18025799/pexels-photo-18025799/free-photo-of-old-brick-house-in-the-forest.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "description": "Charming farmhouse surrounded by lush fields and gardens.",
+        "rooms": 6,
+        "bathrooms": 4,
+        "garageCapacity": 2,
+        "squareFeet": 3000,
+        "builtYear": 2006,
+        "propertyType": "Farmhouse",
+        "propertyStatus": "For Sale",
+        "featuredStatus": "false",
+        "address": {
+            "country": "Brazil",
+            "zipCode": "20040-020",
+            "city": "Rio de Janeiro",
+            "area": "Copacabana",
+            "state": "Rio de Janeiro"
+        }
+    },
+    {
+        "id": 8,
+        "title": "Mountain Cabin",
+        "image": "https://images.pexels.com/photos/1064144/pexels-photo-1064144.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "description": "Cozy cabin nestled in the mountains with picturesque views.",
+        "rooms": 2,
+        "bathrooms": 1,
+        "garageCapacity": 0,
+        "squareFeet": 900,
+        "builtYear": 1995,
+        "propertyType": "Cabin",
+        "propertyStatus": "Sold",
+        "featuredStatus": "false",
+        "address": {
+            "country": "China",
+            "zipCode": "100006",
+            "city": "Beijing",
+            "area": "Dongcheng",
+            "state": "Beijing"
+        }
+    },
+    {
+        "id": 9,
+        "title": "Urban Townhouse",
+        "image": "https://images.pexels.com/photos/14493179/pexels-photo-14493179.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "description": "Stylish townhouse in a vibrant urban neighborhood.",
+        "rooms": 3,
+        "bathrooms": 2,
+        "garageCapacity": 1,
+        "squareFeet": 1800,
+        "builtYear": 2012,
+        "propertyType": "Townhouse",
+        "propertyStatus": "For Sale",
+        "featuredStatus": "false",
+        "address": {
+            "country": "Italy",
+            "zipCode": "00185",
+            "city": "Rome",
+            "area": "Esquilino",
+            "state": "Lazio"
+        }
+    },                            
+    {
+        "id": 10,
+        "title": "Secluded Cottage",
+        "image": "https://images.pexels.com/photos/3934023/pexels-photo-3934023.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "description": "Charming cottage surrounded by nature.",
+        "rooms": 1,
+        "bathrooms": 1,
+        "garageCapacity": 0,
+        "squareFeet": 800,
+        "builtYear": 2005,
+        "propertyType": "Cottage",
+        "propertyStatus": "Sold",
+        "featuredStatus": "false",
+        "address": {
+            "country": "Spain",
+            "zipCode": "28013",
+            "city": "Madrid",
+            "area": "Sol",
+            "state": "Community of Madrid"
+        }
+    }
+]
