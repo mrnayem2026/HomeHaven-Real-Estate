@@ -11,7 +11,7 @@
         "builtYear": 2010,
         "propertyType": "House",
         "propertyStatus": "For Sale",
-        "featuredStatus": "true",
+        "featuredStatus": true,
         "address": {
             "country": "Australia",
             "zipCode": "2000",
@@ -32,7 +32,7 @@
         "builtYear": 2018,
         "propertyType": "Apartment",
         "propertyStatus": "For Rent",
-        "featuredStatus": "true",
+        "featuredStatus":true,
         "address": {
             "country": "Canada",
             "zipCode": "V8X 3X4",
@@ -53,7 +53,7 @@
         "builtYear": 2015,
         "propertyType": "Villa",
         "propertyStatus": "For Sale",
-        "featuredStatus": "true",
+        "featuredStatus": true,
         "address": {
             "country": "United Kingdom",
             "zipCode": "SW1A 1AA",
@@ -74,7 +74,7 @@
         "builtYear": 2020,
         "propertyType": "Loft",
         "propertyStatus": "For Rent",
-        "featuredStatus": "true",
+        "featuredStatus": true,
         "address": {
             "country": "Germany",
             "zipCode": "10115",
@@ -95,7 +95,7 @@
         "builtYear": 2008,
         "propertyType": "House",
         "propertyStatus": "For Sale",
-        "featuredStatus": "true",
+        "featuredStatus": true,
         "address": {
             "country": "Japan",
             "zipCode": "100-0005",
@@ -116,7 +116,7 @@
         "builtYear": 2019,
         "propertyType": "Condo",
         "propertyStatus": "For Rent",
-        "featuredStatus": "true",
+        "featuredStatus": true,
         "address": {
             "country": "France",
             "zipCode": "75001",
@@ -137,7 +137,7 @@
         "builtYear": 2006,
         "propertyType": "Farmhouse",
         "propertyStatus": "For Sale",
-        "featuredStatus": "false",
+        "featuredStatus": false,
         "address": {
             "country": "Brazil",
             "zipCode": "20040-020",
@@ -158,7 +158,7 @@
         "builtYear": 1995,
         "propertyType": "Cabin",
         "propertyStatus": "Sold",
-        "featuredStatus": "false",
+        "featuredStatus": false,
         "address": {
             "country": "China",
             "zipCode": "100006",
@@ -179,7 +179,7 @@
         "builtYear": 2012,
         "propertyType": "Townhouse",
         "propertyStatus": "For Sale",
-        "featuredStatus": "false",
+        "featuredStatus": false,
         "address": {
             "country": "Italy",
             "zipCode": "00185",
@@ -200,7 +200,7 @@
         "builtYear": 2005,
         "propertyType": "Cottage",
         "propertyStatus": "Sold",
-        "featuredStatus": "false",
+        "featuredStatus": false,
         "address": {
             "country": "Spain",
             "zipCode": "28013",

@@ -1,3 +1,4 @@
+import FeaturedProperties from "./FeaturedProperties";
 import HeroSlider from "./HeroSlider";
 import HowItWorks from "./HowItWorks";
 
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
      <HeroSlider></HeroSlider>
      <HowItWorks></HowItWorks>
+     <FeaturedProperties></FeaturedProperties>
     </div>
   );
 };
