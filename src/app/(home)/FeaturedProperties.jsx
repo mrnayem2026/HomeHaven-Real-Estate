@@ -3,12 +3,12 @@ import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // import required modules
-import { Pagination } from "swiper/modules";
+import { Pagination,Autoplay } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-// TODO: Do Fetch data from Database, Or try to fetch data better way.
+// TODO: Do Fetch data from Database, Or try to fetch data better way.And Responsive
 import { Roboto_Condensed } from "next/font/google";
 import featureData from "../../data/featuredProperty.json";
 
@@ -48,7 +48,13 @@ const FeaturedProperties = () => {
           </p>
         </div>
       </div>
+
       <Swiper
+         autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter:true
+        }}
         slidesPerView={3}
         centeredSlides={true}
         spaceBetween={40}
@@ -56,7 +62,7 @@ const FeaturedProperties = () => {
         pagination={{
           clickable: true,
         }}
-        modules={[Pagination]}
+        modules={[Pagination,Autoplay]}
         className="mySwiper"
       >
         {featuredItem.map((featuredCard) => (
@@ -82,7 +88,7 @@ const FeaturedProperties = () => {
                   <h2 className=" card-title w-full text-3xl font-roboto font-black">
                     {featuredCard.title}
                   </h2>
-                  <BsEyeFill className="absolute  text-3xl font-roboto font-black top-2 left-[500px] cursor-pointer"></BsEyeFill>
+                  <BsEyeFill className="absolute  text-3xl font-roboto font-black top-2 lg:left-[250px] xl:left-[338px] 2xl:left-[400px] cursor-pointer"></BsEyeFill>
                 </div>
 
                 <p>
@@ -94,12 +100,12 @@ const FeaturedProperties = () => {
                 <div className="flex gap-10">
                   {/* left side  */}
                   <div>
-                    <MdBedroomParent className="inline  w-5 h-5 text-[#9672FF]"></MdBedroomParent>{" "}
+                    <MdBedroomParent className="inline  xl:w-5 xl:h-5 text-[#9672FF]"></MdBedroomParent>{" "}
                     <span className="pl-2 text-[#9672FF] text-base">
                       Rooms {featuredCard.rooms}
                     </span>
                     <p>
-                      <MdBathroom className="inline  w-5 h-5 text-[#4DDFFD]"></MdBathroom>
+                      <MdBathroom className="inline  xl:w-5 xl:h-5 text-[#4DDFFD]"></MdBathroom>
                       <span className=" pl-2 text-[#4DDFFD] text-base">
                         {" "}
                         Bath Rooms {featuredCard.bathrooms}
