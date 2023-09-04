@@ -1,3 +1,4 @@
+import ExploreApartmentTypes from "./ExploreApartmentTypes";
 import FeaturedProperties from "./FeaturedProperties";
 import HeroSlider from "./HeroSlider";
 import HowItWorks from "./HowItWorks";
@@ -8,6 +9,7 @@ const Home = () => {
      <HeroSlider></HeroSlider>
      <HowItWorks></HowItWorks>
      <FeaturedProperties></FeaturedProperties>
+     <ExploreApartmentTypes></ExploreApartmentTypes>
     </div>
   );
 };
