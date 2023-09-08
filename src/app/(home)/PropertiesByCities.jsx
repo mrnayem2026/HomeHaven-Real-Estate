@@ -23,7 +23,7 @@ const PropertiesByCities = () => {
             City Property Insights Guide
           </h1>
           <p className="font-roboto text-lg pt-5 font-normal text-gray-500">
-            Explore our comprehensive guide, 'City Property Insights Guide,' to
+            Explore our comprehensive guide, &apos; City Property Insights Guide,&apos; to
             uncover valuable <br />
             information about real estate properties in various cities. Discover
             key details,

@@ -66,8 +66,8 @@ const FeaturedProperties = () => {
         className="mySwiper"
       >
         {featuredItem.map((featuredCard,index) => (
-          <SwiperSlide>
-            <div key={index} className="rounded-2xl  bg-base-100 shadow-xl">
+          <SwiperSlide key={index}>
+            <div  className="rounded-2xl  bg-base-100 shadow-xl">
               <figure>
                 <img
                   src={featuredCard.image}
