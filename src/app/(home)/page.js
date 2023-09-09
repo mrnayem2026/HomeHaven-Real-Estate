@@ -12,8 +12,8 @@ const Home = () => {
      <HowItWorks></HowItWorks>
      <FeaturedProperties></FeaturedProperties>
      <ExploreApartmentTypes></ExploreApartmentTypes>
-     {/* <PropertiesByCities></PropertiesByCities> */}
      <WhoWeAre></WhoWeAre>
+     <PropertiesByCities></PropertiesByCities>
     </div>
   );
 };
