@@ -26,8 +26,8 @@ const ExploreApartmentTypes = () => {
           </p>
           </div>
 
-          <div className="relative w-[276px]">
-            <Image src={image1} className="rounded-xl"></Image>
+          <div className="relative w-[276px] ">
+            <Image src={image1} className="rounded-xl  "></Image>
             <div className="absolute top-4 left-3 text-white">
                 <p className="text-xl font-black">7 Propertis</p>
                 <h1>Studio</h1>

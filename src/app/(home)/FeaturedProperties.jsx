@@ -71,7 +71,7 @@ const FeaturedProperties = () => {
               <figure>
                 <img
                   src={featuredCard.image}
-                  className="h-full rounded-2xl relative"
+                  className="h-full rounded-2xl relative transition duration-300 ease-in-out hover:scale-110"
                   alt="Album"
                 />
                 <div className="absolute top-3 left-3">
