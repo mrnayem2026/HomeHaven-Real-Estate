@@ -5,7 +5,7 @@ import InquiryForm from "./componnent/InquiryForm";
 const RealEstateInquiryForm = () => {
   return (
     <>
-      <div className="container mx-auto flex justify-center gap-20 py-32">
+      <div className="container mx-auto flex flex-col lg:flex-row justify-center gap-20 py-32">
         {/* left side Start [Form Section ]  */}
         <div>
           {/* Content Section  Start  */}

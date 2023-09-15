@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "@egjs/flicking": "^4.11.0",
+    "@egjs/flicking-plugins": "^4.7.1",
+    "@egjs/react-flicking": "^4.11.0",
     "autoprefixer": "10.4.14",
+    "caniuse-lite": "^1.0.30001534",
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.6",
     "keen-slider": "^6.8.6",
@@ -20,6 +23,7 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.46.1",
     "react-icons": "^4.10.1",
+    "react-ripples-hover": "^0.2.1",
     "react-select": "^5.7.4",
     "swiper": "^10.2.0",
     "tailwindcss": "3.3.2"

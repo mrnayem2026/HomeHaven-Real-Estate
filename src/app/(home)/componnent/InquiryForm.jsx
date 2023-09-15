@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
+import Link from 'react-ripples-hover';
 
 //   This Options for Select tag
 const country = [
@@ -30,6 +31,7 @@ const InquiryForm = () => {
   const onSubmit = (data) => {
     console.log(data);
     setSelectedValue(null);
+    // TODO: Selceted Value Reset korte hove
     reset();
   };
 
@@ -244,7 +246,8 @@ const InquiryForm = () => {
         </div>
         {/* Max Price and Minimum Size End   */}
 
-        <input type="submit" className="cursor-pointer bg-red-400  mt-7  w-full py-4 rounded-lg text-2xl font-black text-white" />
+        
+        <Link as="button"  variant="secondary" className="w-full mt-7  py-4 "><input type="submit"  className="cursor-pointer w-full   rounded-lg text-2xl font-black text-white"/></Link>
       </form>
     </>
   );

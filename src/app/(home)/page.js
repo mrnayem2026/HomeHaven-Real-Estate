@@ -5,6 +5,7 @@ import HowItWorks from "./HowItWorks";
 import OurMainFocus from "./OurMainFocus";
 import PropertiesByCities from "./PropertiesByCities";
 import RealEstateInquiryForm from "./RealEstateInquiryForm";
+import TrustedByCompany from "./TrustedByCompany";
 import WhoWeAre from "./WhoWeAre";
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
       <PropertiesByCities></PropertiesByCities>
       <OurMainFocus></OurMainFocus>
       <RealEstateInquiryForm></RealEstateInquiryForm>
+      <TrustedByCompany></TrustedByCompany>
     </>
   );
 };
