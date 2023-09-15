@@ -4,19 +4,21 @@ import HeroSlider from "./HeroSlider";
 import HowItWorks from "./HowItWorks";
 import OurMainFocus from "./OurMainFocus";
 import PropertiesByCities from "./PropertiesByCities";
+import RealEstateInquiryForm from "./RealEstateInquiryForm";
 import WhoWeAre from "./WhoWeAre";
 
 const Home = () => {
   return (
-    <div>
-     <HeroSlider></HeroSlider>
-     <HowItWorks></HowItWorks>
-     <FeaturedProperties></FeaturedProperties>
-     <ExploreApartmentTypes></ExploreApartmentTypes>
-     <WhoWeAre></WhoWeAre>
-     <PropertiesByCities></PropertiesByCities>
-     <OurMainFocus></OurMainFocus>
-    </div>
+    <>
+      <HeroSlider></HeroSlider>
+      <HowItWorks></HowItWorks>
+      <FeaturedProperties></FeaturedProperties>
+      <ExploreApartmentTypes></ExploreApartmentTypes>
+      <WhoWeAre></WhoWeAre>
+      <PropertiesByCities></PropertiesByCities>
+      <OurMainFocus></OurMainFocus>
+      <RealEstateInquiryForm></RealEstateInquiryForm>
+    </>
   );
 };
 
