@@ -4,3 +4,6 @@
 
 
   
+.main-slider .swiper-slide-active .image-layer {
+  @apply scale-150 -z-10;
+}

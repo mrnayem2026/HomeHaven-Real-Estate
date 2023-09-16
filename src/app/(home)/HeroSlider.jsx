@@ -3,6 +3,7 @@
 import { Roboto_Condensed } from "next/font/google";
 // Import Swiper styles
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 import "swiper/css/bundle";
 
 import heroImage5 from "../../assest/image/heroImage5.jpg";
@@ -18,23 +19,33 @@ const roboto_condensed = Roboto_Condensed({
 });
 
 const imageStyle = {
-  transform:'scale(1.5)',
+  transform: "scale(1.5)",
 };
 
 const HeroSlider = () => {
   return (
-    <div>
-      <Swiper slidesPerView={1} loop effect="fade">
+    <div className="main-slider">
+      <Swiper
+        slidesPerView={1}
+        loop
+        effect="fade"
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter:true
+        }}
+        modules={[Autoplay]}
+      >
         {/* Slider 1  */}
         <SwiperSlide>
           <div className="text-white">
-            <div className="relative">
-              <Image src={heroImage1} style={imageStyle}></Image>
+            <div className="relative ">
+              <Image src={heroImage1} style={imageStyle}  ></Image>
               <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent "></div>
             </div>
             <div className="absolute top-[40%] left-[40%]">
               <h1 className={`${roboto_condensed.variable} font-bold text-6xl`}>
-                Smart Living Style <br />
+                Smart Living Style11 <br />
                 for Smart People
               </h1>
               <p className="font-roboto text-base font-normal">
