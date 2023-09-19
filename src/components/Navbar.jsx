@@ -1,5 +1,6 @@
 import logoHomeHaven from "@/assest/icons/logoHomeHaven.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -47,12 +48,12 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <Image
+         <Link href='/'> <Image
             src={logoHomeHaven}
             alt="Picture of the author"
             width={140}
             height={80}
-          ></Image>
+          ></Image></Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -74,7 +75,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Login</a>
+          <Link href='/signup' className="btn">Signup</Link>
         </div>
       </div>
     </div>
