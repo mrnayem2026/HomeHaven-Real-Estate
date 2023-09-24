@@ -1,13 +1,20 @@
 "use client";
+import {
+  loadCaptchaEnginge,
+  LoadCanvasTemplate,
+  LoadCanvasTemplateNoReload,
+  validateCaptcha,
+} from "react-simple-captcha";
 import Lottie from "lottie-react";
 import singUpIcon from "../../assest/icons/oNAKbP8r85.json";
 import { useForm } from "react-hook-form";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-const page = () => {
+const SignUpPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setshowConfirmPassword] = useState(false);
   const [confirmPasswordError, setConfirmPasswordError] = useState("");
+  const [captchaError, setCaptchaError] = useState("");
   const {
     register,
     handleSubmit,
@@ -31,15 +38,21 @@ const page = () => {
 
   // Below Function work for Form [Start]
   const onSubmit = (data) => {
-    if (data.password === data.confirmPassword) {
+    if (data.password === data.confirmPassword && validateCaptcha(data.captcha) == true) {
       console.log(data);
       reset();
       setConfirmPasswordError("");
+      setCaptchaError("");
     } else {
       setConfirmPasswordError("Password and Confirm Password don't match");
+      setCaptchaError("Captcha don't match")
     }
   };
   //  Function work for Form [End]
+
+  useEffect(() => {
+    loadCaptchaEnginge(6,"white","red");
+  }, []);
 
   return (
     <div className="container mx-auto">
@@ -260,7 +273,11 @@ const page = () => {
                   className="checkbox checkbox-error  border-red-500"
                 />
                 <span className="pb-2 block text-lg text-[#E73300]  font-black">
-                  I accept the <span className="text-red-300 underline"> <Link href="/">terms and conditions</Link> </span>
+                  I accept the{" "}
+                  <span className="text-red-300 underline">
+                    {" "}
+                    <Link href="/">terms and conditions</Link>{" "}
+                  </span>
                 </span>
               </label>
               {/* errors will return when field validation fails  */}
@@ -272,9 +289,43 @@ const page = () => {
             </div>
             {/* Terms and Condition Field End */}
 
+            {/* Captch Start  */}
+            <div className="pt-7">
+              <label
+                htmlFor="password"
+                className="pb-2 block text-lg text-[#E73300]  font-black"
+              >
+                Type Captcha
+              </label>
+              <input
+                {...register("captcha",{
+                  required: true,
+                })}
+                type="text"
+                className="placeholder:text-xs placeholder:text-red-300 w-full border focus:outline-none  px-3 py-2 rounded-md border-[#E73300]"
+                placeholder="Type Captcha"
+              />
+
+              {/* errors will return when field validation fails  or Captcha not same with the field */}
+              {errors.captcha?.type === "required" && (
+                <span className="text-xs text-red-500 pb-1 inline pr-3">
+                  This captcha is required.
+                </span>
+              )}
+
+              <span className="text-xs text-red-500 pb-1 inline my-2">
+                {captchaError}
+              </span>
+
+              <div className="pt-4">
+                <LoadCanvasTemplate reloadColor="red" className="btn"></LoadCanvasTemplate>
+              </div>
+            </div>
+            {/* Captch End  */}
+
             <input
               type="submit"
-              className="cursor-pointer mt-7 w-full btn  btn-warning  rounded-lg text-2xl font-black "
+              className="cursor-pointer mt-7 w-full btn  btn-error text-white bg-red-600 hover:text-black hover:bg-red-500  rounded-lg text-2xl font-black "
             />
           </form>
         </div>
@@ -284,4 +335,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default SignUpPage;
