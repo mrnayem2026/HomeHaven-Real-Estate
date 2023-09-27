@@ -2,6 +2,7 @@ import "./globals.css";
 import { Roboto } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import StytchProviderForAuth from "@/StytchAuth/StytchProviderForAuth;";
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700", "900"],
@@ -20,7 +21,8 @@ export default function RootLayout({ children }) {
       <body className={`${roboto.variable} font-roboto`}>
         <div>
           <Navbar></Navbar>
-          <main>{children}</main>
+          <StytchProviderForAuth chieldern={<main>{children}</main>}>  
+          </StytchProviderForAuth>
           <Footer></Footer>
         </div>
       </body>

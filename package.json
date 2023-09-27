@@ -12,6 +12,8 @@
     "@egjs/flicking": "^4.11.0",
     "@egjs/flicking-plugins": "^4.7.1",
     "@egjs/react-flicking": "^4.11.0",
+    "@stytch/nextjs": "^11.0.0",
+    "@stytch/vanilla-js": "^2.2.1",
     "autoprefixer": "10.4.14",
     "caniuse-lite": "^1.0.30001534",
     "eslint": "8.42.0",

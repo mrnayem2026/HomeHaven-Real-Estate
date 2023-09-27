@@ -3,7 +3,7 @@
 import { Roboto_Condensed } from "next/font/google";
 // Import Swiper styles
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay} from "swiper/modules";
 import "swiper/css/bundle";
 
 import heroImage5 from "../../assest/image/heroImage5.jpg";
@@ -18,9 +18,7 @@ const roboto_condensed = Roboto_Condensed({
   variable: "--font-roboto-condensed",
 });
 
-const imageStyle = {
-  transform: "scale(1.5)",
-};
+
 
 const HeroSlider = () => {
   return (
@@ -28,7 +26,6 @@ const HeroSlider = () => {
       <Swiper
         slidesPerView={1}
         loop
-        effect="fade"
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
@@ -38,17 +35,15 @@ const HeroSlider = () => {
       >
         {/* Slider 1  */}
         <SwiperSlide>
-          <div className="text-white">
-            <div className="relative ">
-              <Image src={heroImage1} style={imageStyle}  ></Image>
-              <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent "></div>
-            </div>
-            <div className="absolute top-[40%] left-[40%]">
-              <h1 className={`${roboto_condensed.variable} font-bold text-6xl`}>
-                Smart Living Style11 <br />
+          <div className="text-white"> 
+              <Image src={heroImage1} className="relative "></Image>
+              <div className="absolute  inset-0 bg-gradient-to-t from-black to-transparent "></div>
+            <div className="absolute top-[37%] left-[37%]">
+              <h1 className={`${roboto_condensed.variable} font-bold text-7xl text-center`}>
+                Smart Living Style  <br />
                 for Smart People
               </h1>
-              <p className="font-roboto text-base font-normal">
+              <p className="font-roboto text-center text-base font-light pt-3">
                 Much did had call new drew that kept. Limits expect wonder{" "}
                 <br /> law she. Now has you views woman noisy match money rooms.
               </p>
@@ -59,18 +54,16 @@ const HeroSlider = () => {
         {/* Slider 2  */}
         <SwiperSlide>
           <div className="text-white">
-            <div className="relative">
-              <Image src={heroImage2} style={imageStyle}></Image>
+              <Image src={heroImage2}  className="relative"></Image>
               <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent "></div>
-            </div>
-            <div className="absolute top-[40%] left-[40%]">
-              <h1 className={`${roboto_condensed.variable} font-bold text-6xl`}>
-                Smart Living Style <br />
-                for Smart People
+            <div className="absolute top-[37%] left-[37%]">
+              <h1 className={`${roboto_condensed.variable} font-bold text-7xl text-center`}>
+              Intelligent Lifestyle <br />
+              for Savvy Individuals
               </h1>
-              <p className="font-roboto text-base font-normal">
-                Much did had call new drew that kept. Limits expect wonder{" "}
-                <br /> law she. Now has you views woman noisy match money rooms.
+              <p className="font-roboto text-center text-base font-light pt-3">
+              Intelligent Lifestyle for Savvy Individuals: Embrace a Smarter
+                <br /> Way of Living to Enhance Your Well-being and Fulfillment.
               </p>
             </div>
           </div>
@@ -79,18 +72,16 @@ const HeroSlider = () => {
         {/* Slider 3  */}
         <SwiperSlide>
           <div className="text-white">
-            <div className="relative">
-              <Image src={heroImage3} style={imageStyle}></Image>
+              <Image src={heroImage3}  className="relative"></Image>
               <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent "></div>
-            </div>
-            <div className="absolute top-[40%] left-[40%]">
-              <h1 className={`${roboto_condensed.variable} font-bold text-6xl`}>
-                Smart Living Style <br />
-                for Smart People
+            <div className="absolute top-[37%] left-[37%]">
+              <h1 className={`${roboto_condensed.variable} font-bold text-7xl text-center`}>
+              Modern Living for<br />
+              Thoughtful Individuals
               </h1>
-              <p className="font-roboto text-base font-normal">
-                Much did had call new drew that kept. Limits expect wonder{" "}
-                <br /> law she. Now has you views woman noisy match money rooms.
+              <p className="font-roboto text-center text-base font-light pt-3">
+              Experience the Best of Modern Living for Thoughtful Individuals.
+                <br /> Where Intelligence Meets Purpose, Creating a Lifestyle that Enhances Well-being and Sustainability.
               </p>
             </div>
           </div>
@@ -99,18 +90,16 @@ const HeroSlider = () => {
         {/* Slider 4  */}
         <SwiperSlide>
           <div className="text-white">
-            <div className="relative">
-              <Image src={heroImage5} style={imageStyle}></Image>
+              <Image src={heroImage5}  className="relative"></Image>
               <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent "></div>
-            </div>
-            <div className="absolute top-[40%] left-[40%]">
-              <h1 className={`${roboto_condensed.variable} font-bold text-6xl`}>
-                Smart Living Style <br />
-                for Smart People
+            <div className="absolute top-[37%] left-[37%]">
+              <h1 className={`${roboto_condensed.variable} font-bold text-7xl text-center`}>
+              Elevated Living for<br />
+              Astute Minds
               </h1>
-              <p className="font-roboto text-base font-normal">
-                Much did had call new drew that kept. Limits expect wonder{" "}
-                <br /> law she. Now has you views woman noisy match money rooms.
+              <p className="font-roboto text-center text-base font-light pt-3">
+              A Synthesis of Intelligence, Purpose, and Modernity, Crafting.
+                <br /> A Lifestyle that Sets New Standards for Excellence and Fulfillment.
               </p>
             </div>
           </div>

@@ -10,17 +10,23 @@ import singUpIcon from "../../assest/icons/oNAKbP8r85.json";
 import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useStytch } from "@stytch/nextjs";
 const SignUpPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setshowConfirmPassword] = useState(false);
   const [confirmPasswordError, setConfirmPasswordError] = useState("");
   const [captchaError, setCaptchaError] = useState("");
+  const stytchClient = useStytch();
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
   } = useForm();
+
+  // Signup Config from Stytch (Start)
+
+  // Signup Config from Stytch (end)
 
   // Hide password
   const handlePasswordHide = () => {
@@ -34,29 +40,36 @@ const SignUpPage = () => {
 
   //   Reguler Expression For Password validation
   const regex =
-    /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@#$%^&+=!])[A-Za-z\d@#$%^&+=!]{6,}$/;
+    /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@#$%^&+=!])[A-Za-z\d@#$%^&+=!]{8,}$/;
 
   // Below Function work for Form [Start]
   const onSubmit = (data) => {
-    if (data.password === data.confirmPassword && validateCaptcha(data.captcha) == true) {
+    // && validateCaptcha(data.captcha) == true
+    if (data.password === data.confirmPassword) {
       console.log(data);
+
+      stytchClient.passwords.create({
+        email: data.email,
+        password: data.password,
+        session_duration_minutes: 60,
+      });
       reset();
       setConfirmPasswordError("");
       setCaptchaError("");
     } else {
       setConfirmPasswordError("Password and Confirm Password don't match");
-      setCaptchaError("Captcha don't match")
+      setCaptchaError("Captcha don't match");
     }
   };
   //  Function work for Form [End]
 
   useEffect(() => {
-    loadCaptchaEnginge(6,"white","red");
+    loadCaptchaEnginge(6, "white", "red");
   }, []);
 
   return (
     <div className="container mx-auto">
-      <div className="flex flex-col lg:flex-row justify-center items-center gap-6">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-36">
         {/* Left side ---> Lottie Animation Start  */}
         <div className="w-3/6">
           <Lottie animationData={singUpIcon} loop={true} />
@@ -66,52 +79,6 @@ const SignUpPage = () => {
         {/* Right Side ----> Form Section Start  */}
         <div>
           <form onSubmit={handleSubmit(onSubmit)}>
-            {/* First and Last Name Start  */}
-            <div className="flex gap-2 pt-7">
-              {/* First name*/}
-              <div className=" w-full">
-                <label
-                  htmlFor="firstName"
-                  className="pb-2 block text-lg text-[#E73300]  font-black"
-                >
-                  First name
-                </label>
-                <input
-                  {...register("firstName", { required: true })}
-                  className="placeholder:text-xs placeholder:text-red-300 w-full border focus:outline-none  px-3 py-2 rounded-md border-[#E73300]"
-                  placeholder="Your First Name"
-                />
-                {/* errors will return when field validation fails  */}
-                {errors.firstName && (
-                  <span className="text-xs text-red-500 pb-1 inline ">
-                    This field is required
-                  </span>
-                )}
-              </div>
-
-              {/* last name*/}
-              <div className=" w-full">
-                <label
-                  htmlFor="firstName"
-                  className="pb-2 block text-lg text-[#E73300]  font-black"
-                >
-                  Last name
-                </label>
-                <input
-                  {...register("lastName", { required: true })}
-                  className="placeholder:text-xs placeholder:text-red-300 w-full border focus:outline-none  px-3 py-2 rounded-md border-[#E73300]"
-                  placeholder="Your Last Name"
-                />
-                {/* errors will return when field validation fails  */}
-                {errors.lastName && (
-                  <span className="text-xs text-red-500 pb-1 inline ">
-                    This field is required
-                  </span>
-                )}
-              </div>
-            </div>
-            {/* First and Last Name End  */}
-
             {/* Email Address  */}
             <div className="flex flex-col gap-2  pt-7">
               <label
@@ -193,7 +160,7 @@ const SignUpPage = () => {
               )}
               {errors.password?.type === "pattern" && (
                 <span className="text-xs text-red-500 pb-1 inline ">
-                  Password must have 6 characters. <br /> one Uppercase and
+                  Password must have 8 characters. <br /> one Uppercase and
                   lowercase Letter. <br />
                   One Special Character and at least one digit.
                 </span>
@@ -270,9 +237,9 @@ const SignUpPage = () => {
                     required: true,
                   })}
                   type="checkbox"
-                  className="checkbox checkbox-error  border-red-500"
+                  className="checkbox checkbox-error  border-red-500 "
                 />
-                <span className="pb-2 block text-lg text-[#E73300]  font-black">
+                <span className="ml-14 pb-2 block text-lg text-[#E73300]  font-black">
                   I accept the{" "}
                   <span className="text-red-300 underline">
                     {" "}
@@ -297,10 +264,11 @@ const SignUpPage = () => {
               >
                 Type Captcha
               </label>
-              <input
-                {...register("captcha",{
+              {/* {
                   required: true,
-                })}
+                } */}
+              <input
+                {...register("captcha")}
                 type="text"
                 className="placeholder:text-xs placeholder:text-red-300 w-full border focus:outline-none  px-3 py-2 rounded-md border-[#E73300]"
                 placeholder="Type Captcha"
@@ -318,7 +286,10 @@ const SignUpPage = () => {
               </span>
 
               <div className="pt-4">
-                <LoadCanvasTemplate reloadColor="red" className="btn"></LoadCanvasTemplate>
+                <LoadCanvasTemplate
+                  reloadColor="red"
+                  className="btn"
+                ></LoadCanvasTemplate>
               </div>
             </div>
             {/* Captch End  */}
@@ -336,3 +307,61 @@ const SignUpPage = () => {
 };
 
 export default SignUpPage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+       {/* First and Last Name Start  */}
+            {/*    <div className="flex gap-2 pt-7">
+              First name
+              <div className=" w-full">
+                <label
+                  htmlFor="firstName"
+                  className="pb-2 block text-lg text-[#E73300]  font-black"
+                >
+                  First name
+                </label>
+                <input
+                  {...register("firstName", { required: true })}
+                  className="placeholder:text-xs placeholder:text-red-300 w-full border focus:outline-none  px-3 py-2 rounded-md border-[#E73300]"
+                  placeholder="Your First Name"
+                />
+                errors will return when field validation fails 
+                {errors.firstName && (
+                  <span className="text-xs text-red-500 pb-1 inline ">
+                    This field is required
+                  </span>
+                )}
+              </div>
+
+              last name
+              <div className=" w-full">
+                <label
+                  htmlFor="firstName"
+                  className="pb-2 block text-lg text-[#E73300]  font-black"
+                >
+                  Last name
+                </label>
+                <input
+                  {...register("lastName", { required: true })}
+                  className="placeholder:text-xs placeholder:text-red-300 w-full border focus:outline-none  px-3 py-2 rounded-md border-[#E73300]"
+                  placeholder="Your Last Name"
+                />
+                errors will return when field validation fails 
+                {errors.lastName && (
+                  <span className="text-xs text-red-500 pb-1 inline ">
+                    This field is required
+                  </span>
+                )}
+              </div>
+            </div> */}
+            {/* First and Last Name End  */}
